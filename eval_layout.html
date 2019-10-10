@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<style>
+		*{
+			margin: 0;
+            padding: 0;
+		}
 
+		.inner{
+            width: 100%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+		img {
+			width: 100%;
+		}
+		.smart, .desk, .large {
+			display: none;
+		}
+
+		@media screen and (min-width: 769px){
+  			.col {
+				display: inline-block;
+				width: 48%;
+			}
+			.tel {
+				display: none;
+			}
+			.smart {
+				display:block;
+			}
+        }
+		@media screen and  (min-width: 1100px){
+            .inner{
+              	width: 1100px;
+				margin: 5px auto;
+            }
+			.smart{
+				display: none;
+			}
+			.desk{
+				display: block;
+			}
+        }
+		@media screen and  (min-width: 1370px){
+            .inner{
+                width: 1370px;
+            }
+			.col {
+				display: inline-block;
+				width: 24%;
+			}
+			.desk {
+				display: none;
+			}
+			.large{
+				display: block;
+			}
+        }
+
+		.txtcenter , .tel, .smart, .desk, .large {
+				text-align: center;
+		}
+		
 	</style>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+
 		<h1 class="txtcenter">Evaluation  Layout</h1>
-		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
-		<h2 class="desktop txtcenter">Vue Desktop</h2>
-		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
-		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+		<h2 class="tel">tel</h2>
+		<h2 class="smart">smart</h2>
+		<h2 class="desk">desk</h2>
+		<h2 class="large">large</h2>
 
-
-
+		<div class="inner">	
+			<div class="mer col">
+				<img src="img/mer.jpg" alt="image mer">
+			</div>
+			<div class="lac col">
+				<img src="img/lac.jpg" alt="image lac">
+			</div>
+			<div class="montagne col">
+				<img src="img/montagne.jpg" alt="image montagne">
+			</div>
+			<div class="foret col">
+				<img src="img/foret.jpg" alt="image foret">
+			</div>
+		</div>
 	</body>
 </html>
